@@ -44,7 +44,7 @@ public class Main {
   public static void clock(){
     LocalDateTime now = LocalDateTime.now();
     int second = now.getSecond();
-   while(true){
+    while(true){
       now = LocalDateTime.now();
       int newSecond = now.getSecond();
       if(second != newSecond){
