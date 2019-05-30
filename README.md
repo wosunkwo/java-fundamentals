@@ -6,7 +6,7 @@ It contains Lab assignments from code401
 - [Day 1: Java primitives and control flow ](/basics/Main.java) 
 - [Day 2: Arrays, for loops, imports, ArrayLists](/basiclibrary/src/)
 - [Day 3: Maps, File I/O, and Testing Part 1](/basiclibrary/src/)
-- [Day 3: Maps, File I/O, and Testing Part 2](/linter/src/)
+- [Day 3: Maps, File I/O, and Testing Part 2](/linter/README.md/)
 
 Lab- 01
 The Basics directory has a Main.java file that contains three methods:
