@@ -10,7 +10,7 @@ public class App {
 
     public static void main(String[] args) {
         LinterClass reader = new LinterClass();
-//        System.out.println(new App().getGreeting());
-        reader.semicolonChecker();
+        String path = "src/main/resources/gates.js";
+        reader.semicolonChecker(path);
     }
 }
