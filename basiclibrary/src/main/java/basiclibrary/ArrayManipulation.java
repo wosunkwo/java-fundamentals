@@ -33,19 +33,21 @@ public class ArrayManipulation {
         return sum / arr.length;
     }
 
-    public int array0fArrays(int[][] arr){
+    public int[] array0fArrays(int[][] arr){
         if(arr.length > 0){
             int currentAvg = calcAvg(arr[0]);
+            int[] resultArr = arr[0];
             int lowestAvg = currentAvg;
             for(int i = 1; i < arr.length; i++){
                 currentAvg = calcAvg(arr[i]);
                 if(lowestAvg > currentAvg){
                     lowestAvg = currentAvg;
+                    resultArr = arr[i];
                 }
             }
-            return lowestAvg;
+            return resultArr;
         }else{
-            return 0;
+            return null;
         }
     }
 

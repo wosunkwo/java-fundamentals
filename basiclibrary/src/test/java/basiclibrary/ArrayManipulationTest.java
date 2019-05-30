@@ -2,6 +2,8 @@ package basiclibrary;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class ArrayManipulationTest {
@@ -67,7 +69,8 @@ public class ArrayManipulationTest {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-        assertEquals("this should return 'true'", 4, classUnderTest.array0fArrays(arr));
+        int[] expectedArr = {1,2,3,4,5,6,7};
+        assertEquals("this should return 'true'", Arrays.toString(expectedArr), Arrays.toString(classUnderTest.array0fArrays(arr)));
     }
 
     @Test
@@ -79,6 +82,8 @@ public class ArrayManipulationTest {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-        assertFalse("this should return 'false'", 100 == classUnderTest.array0fArrays(arr));
+
+        int[] expectedArr = {65,56,55,52,55,62,57};
+        assertFalse("this should return 'false'",  Arrays.toString(expectedArr) == Arrays.toString(classUnderTest.array0fArrays(arr)));
     }
 }
