@@ -14,7 +14,7 @@ public class ArrayManipulationTest {
         ArrayManipulation classUnderTest = new ArrayManipulation();
         int n = 4;
         int[] expectedOutput = new int[4];
-        assertEquals("this should return 'true'", expectedOutput.length, classUnderTest.roll(n).length);
+        assertEquals("this should return an arrays length", expectedOutput.length, classUnderTest.roll(n).length);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class ArrayManipulationTest {
         ArrayManipulation classUnderTest = new ArrayManipulation();
         int n = 0;
         int[] expectedOutput = {};
-        assertArrayEquals("this should return 'true'", expectedOutput, classUnderTest.roll(n));
+        assertArrayEquals("this should return an array", expectedOutput, classUnderTest.roll(n));
     }
 
     /*********************************************************************/

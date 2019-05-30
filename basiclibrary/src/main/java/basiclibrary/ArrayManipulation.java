@@ -3,12 +3,12 @@ package basiclibrary;
 public class ArrayManipulation {
     public int[] roll(int n){
         int[] resultArr =  new int [n];
-        int min = 1;
-        int max = 6;
+        int MIN = 1;
+        int MAX = 6;
         int randNum;
 
         for(int i =0; i < n; i++) {
-            randNum = min + (int)(Math.random() * ((max-min) + 1));
+            randNum = MIN + (int)(Math.random() * ((MAX-MIN) + 1));
             resultArr[i] = randNum;
         }
         return resultArr;
