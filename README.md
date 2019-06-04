@@ -9,7 +9,7 @@ It contains Lab assignments from code401
 - [Day 3: Maps, File I/O, and Testing Part 2](/linter/README.md/)
 
 ## Week 1 | java- fundamentals
-- [Day 1: Inheritance and Interfaces ] [https://github.com/wosunkwo/java-fundamentals/tree/master/inheritance] 
+[Day 1: Inheritance and Interfaces] (https://github.com/wosunkwo/java-fundamentals/tree/master/inheritance)
 
 Lab- 01
 The Basics directory has a Main.java file that contains three methods:
