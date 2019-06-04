@@ -71,17 +71,18 @@ public class Restaurant {
     }
 
     public void addReview(Review review) {
-        this.review.add(review);
-        if((this.getReview()).size() == 0){
-            this.setNumOfStars(review.getNumOfStars());
-        }else{
-            int sum = 0;
-            for(Review reviewList : this.review){
-                sum += reviewList.getNumOfStars();
+        if(!(this.review.contains(review))){ //condition to make sure we don't add the same review twice to our restaurant
+            this.review.add(review);
+            if((this.getReview()).size() == 0){
+                this.setNumOfStars(review.getNumOfStars());
+            }else{
+                int sum = 0;
+                for(Review reviewList : this.review){
+                    sum += reviewList.getNumOfStars();
+                }
+                this.setNumOfStars(sum / this.review.size());
             }
-            this.setNumOfStars(sum / this.review.size());
         }
-
     }
 
     public static void main (String[] args){
@@ -90,6 +91,7 @@ public class Restaurant {
         Review review = new Review("Williams Osunkwo", "This restaurant is crap, I really hated it. I am definitely never coming back here again", 1);
         Review review2 = new Review("James Bond", "This restaurant is actually nice, I really enjoyed my stay here. I will definitely be coming back again, whenever i am in the city", 5);
         restaurant.addReview(review);
+        restaurant.addReview(review2);
         restaurant.addReview(review2);
         System.out.println(restaurant.toString());
     }
