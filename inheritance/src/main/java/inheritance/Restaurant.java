@@ -84,15 +84,4 @@ public class Restaurant {
             }
         }
     }
-
-    public static void main (String[] args){
-        Restaurant restaurant = new Restaurant("Nobu", "$$$$", 4);
-
-        Review review = new Review("Williams Osunkwo", "This restaurant is crap, I really hated it. I am definitely never coming back here again", 1);
-        Review review2 = new Review("James Bond", "This restaurant is actually nice, I really enjoyed my stay here. I will definitely be coming back again, whenever i am in the city", 5);
-        restaurant.addReview(review);
-        restaurant.addReview(review2);
-        restaurant.addReview(review2);
-        System.out.println(restaurant.toString());
-    }
 }
