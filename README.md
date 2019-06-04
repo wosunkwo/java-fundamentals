@@ -8,6 +8,9 @@ It contains Lab assignments from code401
 - [Day 3: Maps, File I/O, and Testing Part 1](/basiclibrary/src/)
 - [Day 3: Maps, File I/O, and Testing Part 2](/linter/README.md/)
 
+## Week 1 | java- fundamentals
+- [Day 1: Inheritance and Interfaces ] (https://github.com/wosunkwo/java-fundamentals/tree/master/inheritance) 
+
 Lab- 01
 The Basics directory has a Main.java file that contains three methods:
 pluralize - which addes an 's' to the end of a word depending on what integer gets passed to it
