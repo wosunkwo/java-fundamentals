@@ -8,7 +8,7 @@ public class Restaurant {
     private String name;
     private String numOfDollarSigns;
     private int numOfStars;
-    private ArrayList <Review> review = new ArrayList<>();
+    private ArrayList <Review> reviews = new ArrayList<>();
 
 
     //the default constructor that will be initialized if an object is instantiated without any arguments/parameters
@@ -31,10 +31,10 @@ public class Restaurant {
 
     public String toString(){
         StringBuilder reviewOutput = new StringBuilder();
-        for(Review reviewList: this.review){
+        for(Review reviewList: this.reviews){
             reviewOutput.append(reviewList + "\n");
         }
-        if(this.review.size() == 0){
+        if(this.reviews.size() == 0){
             return String.format("Welcome to %s, this is a %s star restaurant. Our price categories is %s.", this.getName(), this.getNumOfStars(), this.getNumOfDollarSigns());
         }else{
             return String.format("Welcome to %s, this is a %s star restaurant. Our price categories is %s.\nThis are our reviews below:\n\n%s", this.getName(), this.getNumOfStars(), this.getNumOfDollarSigns(), reviewOutput);
@@ -67,21 +67,18 @@ public class Restaurant {
     }
 
     public ArrayList getReview() {
-        return this.review;
+        return this.reviews;
     }
 
     public void addReview(Review review) {
-        if(!(this.review.contains(review))){ //condition to make sure we don't add the same review twice to our restaurant
-            this.review.add(review);
-            if((this.getReview()).size() == 0){
-                this.setNumOfStars(review.getNumOfStars());
-            }else{
-                int sum = 0;
-                for(Review reviewList : this.review){
-                    sum += reviewList.getNumOfStars();
-                }
-                this.setNumOfStars(sum / this.review.size());
+        if(!(this.reviews.contains(review))){ //condition to make sure we don't add the same review twice to our restaurant
+            this.reviews.add(review);
+            review.restaurant = this;
+            int sum = 0;
+            for(Review reviewList : this.reviews){
+                sum += reviewList.getNumOfStars();
             }
+            this.setNumOfStars(sum / this.reviews.size());
         }
     }
 }

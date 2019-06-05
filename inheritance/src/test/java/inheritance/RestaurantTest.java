@@ -22,7 +22,8 @@ public class RestaurantTest {
         Review classUnderTest = new Review("Williams Osunkwo", "This restaurant is crap, I really hated it. I am definitely never coming back here again", 1);
         String expectedOutput = "Author: Williams Osunkwo\n" +
                 "Comment: This restaurant is crap, I really hated it. I am definitely never coming back here again\n" +
-                "Number of Stars: 1\n";
+                "Number of Stars: 1\n"+
+                "For: ";
 
         assertEquals("this should return true if the expected output and the actual output are the same", expectedOutput, classUnderTest.toString());
     }
@@ -41,12 +42,14 @@ public class RestaurantTest {
         String expectedOutputName1 = "Burger King";
         String expectedOutputReview1 = "[Author: James Bond\n" +
                 "Comment: This restaurant is actually nice, I really enjoyed my stay here. I will definitely be coming back again, whenever i am in the city\n" +
-                "Number of Stars: 5\n]";
+                "Number of Stars: 5\n" +
+                "For: ]";
 
         String expectedOutputName2 = "Taco Bell";
         String expectedOutputReview2 = "[Author: Williams Osunkwo\n" +
                 "Comment: This restaurant is crap, I really hated it. I am definitely never coming back here again\n" +
-                "Number of Stars: 1\n]";
+                "Number of Stars: 1\n" +
+                "For: ]";
 
         assertEquals("this should return true if the expected output and the actual output are the same", expectedOutputName1, burgerKing.getName());
         assertEquals("this should return true if the expected output and the actual output are the same", expectedOutputReview1, burgerKing.getReview().toString());
@@ -71,10 +74,11 @@ public class RestaurantTest {
                 "Author: Williams Osunkwo\n" +
                 "Comment: This restaurant is crap, I really hated it. I am definitely never coming back here again\n" +
                 "Number of Stars: 1\n" +
-                "\n" +
+                "For: \n" +
                 "Author: James Bond\n" +
                 "Comment: This restaurant is actually nice, I really enjoyed my stay here. I will definitely be coming back again, whenever i am in the city\n" +
-                "Number of Stars: 5\n\n";
+                "Number of Stars: 5\n" +
+                "For: \n";
 
         assertEquals("this should return true if the expected output and the actual output are the same", expectedOutput, classUnderTest.toString());
     }
