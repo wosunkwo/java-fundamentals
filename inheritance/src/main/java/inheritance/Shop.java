@@ -64,12 +64,4 @@ public class Shop {
         review.shop = this;
     }
 
-    public static void main(String[] args){
-        Shop test = new Shop("Walmart", "You can come here to get your everyday items", "$$$");
-        System.out.println(test.toString());
-        Review review = new Review("Williams", "I like it", 4);
-        test.addReview(review);
-        System.out.println(test.toString());
-    }
-
 }

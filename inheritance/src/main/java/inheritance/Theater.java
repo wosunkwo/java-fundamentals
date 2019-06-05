@@ -77,16 +77,4 @@ public class Theater {
         }
     }
 
-    public static void main (String[] args){
-        Theater amcTheater = new Theater("AMC");
-        amcTheater.addMovie("Avengers");
-        Theater oceanViewTheater = new Theater("Ocean View");
-        oceanViewTheater.addMovie("Iron Man");
-        Review review2 = new Review("James", "I hate it", 0, oceanViewTheater, "Iron Man");
-        Review review = new Review("Williams", "I like it", 2, amcTheater, "Avengers");
-
-        System.out.println(amcTheater.toString());
-//        System.out.println(oceanViewTheater.toString());
-    }
-
 }
